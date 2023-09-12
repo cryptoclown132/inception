@@ -12,7 +12,20 @@ if [ ! -d "/var/lib/mysql/mysql" ]; then
 	fi
 fi
 
+
+
+
 if [ ! -d "/var/lib/mysql/wordpress" ]; then
+mysql_secure_installation <<_EOF_
+
+Y
+root4life
+root4life
+Y
+n
+Y
+Y
+_EOF_
 
 	cat << EOF > /tmp/create_db.sql
 USE mysql;
