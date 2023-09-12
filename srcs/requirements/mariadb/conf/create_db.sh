@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ ! -d "/var/lib/mysql/mysql" ]; then
-	chwon -R mysql:mysql /var/lib/mysql
+	chown -R mysql:mysql /var/lib/mysql
 
 	# init database
 	mysql_install_db --basedir=/usr --datadir=/var/lib/mysql --user=mysql --rpm
